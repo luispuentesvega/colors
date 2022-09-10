@@ -9,11 +9,10 @@ export class ColorHSL implements IColorSwatch {
   saturation: string;
   lightness: string;
 
-  constructor () {
-    this.hue = _random(0, 360);
-    //@TODO: add percentage to saturation and lightness
-    this.saturation = `${_random(0, 100)}%`;
-    this.lightness = `${_random(0, 100)}%`;
+  constructor (data?: ColorHSL) {
+    this.hue = data ? data.hue : _random(0, 360);
+    this.saturation = data ? data.saturation : `${_random(0, 100)}%`;
+    this.lightness = data ? data.lightness : `${_random(0, 100)}%`;
   }
 
   getColorSwatch(): HSL {

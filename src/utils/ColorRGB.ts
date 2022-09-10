@@ -15,11 +15,11 @@ export class ColorRGB implements IColorSwatch {
     this.blue = data ? data.blue : _random(0, 255);;
   }
 
-  getColorAsString(): string {
-    return `rgb(${this.red}, ${this.green}, ${this.blue})`;
-  }
-
   getColorSwatch(): RGB {
     return { ...this, type: ColorTypes.rgb };
+  }
+
+  getColorAsString(): string {
+    return `rgb(${this.red}, ${this.green}, ${this.blue})`;
   }
 }
