@@ -1,8 +1,9 @@
+import { ColorHSL } from './ColorHSL';
 import { ColorRGB } from './ColorRGB';
 
 export const colorMap = {
   rgb: ColorRGB,
-  // hsl: HSL
+  hsl: ColorHSL
 };
 
 export type ColorMap = typeof colorMap;
