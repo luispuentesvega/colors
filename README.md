@@ -10,7 +10,7 @@ npm run dev
 yarn dev
 ```
 
-## How to add new color types
+## How to add new color types...
 
 To add more color types follow the next steps:
 
