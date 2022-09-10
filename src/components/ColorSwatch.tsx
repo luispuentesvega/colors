@@ -4,8 +4,6 @@ import Swatch from '@uiw/react-color-swatch';
 
 import { ColorService } from '../utils/ColorService';
 
-const SERVER_HOST = 'http://localhost:3000/api';
-
 const ColorSwatch: React.FC = () => {
   const [colors, setColors] = useState([]);
 
@@ -15,11 +13,9 @@ const ColorSwatch: React.FC = () => {
 
   const fetchColors = async (): Promise<void> => {
     try {
-      const response = await fetch(`${SERVER_HOST}/color`);
+      const response = await fetch(`api/color`);
       const result = await response.json();
-
       const mappedColors = result.map((color: any) => new ColorService().getColorAsString(color.type, { ...color }));
-      console.log('RES:', mappedColors);
       setColors(mappedColors);
     } catch (e) {
       console.log('ERROR', e);
