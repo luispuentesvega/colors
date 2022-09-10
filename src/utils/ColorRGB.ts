@@ -9,10 +9,14 @@ export class ColorRGB implements IColorSwatch {
   green: number;
   blue: number;
 
-  constructor () {
-    this.red = _random(0, 255);
-    this.green = _random(0, 255);
-    this.blue = _random(0, 255);
+  constructor (data?: ColorRGB) {
+    this.red = data ? data.red : _random(0, 255);
+    this.green = data ? data.green : _random(0, 255);
+    this.blue = data ? data.blue : _random(0, 255);;
+  }
+
+  getColorAsString(): string {
+    return `rgb(${this.red}, ${this.green}, ${this.blue})`;
   }
 
   getColorSwatch(): RGB {

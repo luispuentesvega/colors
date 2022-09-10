@@ -13,8 +13,8 @@ export type RGB = {
 export type HSL = {
   type: ColorTypes.hsl;
   hue: number;
-  saturation: number;
-  lightness: number;
+  saturation: string;
+  lightness: string;
 };
 
 export type Color = RGB | HSL;
