@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react';
 
 import Swatch from '@uiw/react-color-swatch';
 
-import styles from '../styles/Home.module.css';
 import { ColorService } from '../src/utils/ColorService';
 import { hsvaToHex, getContrastingColor, } from '@uiw/color-convert';
 
@@ -33,12 +32,7 @@ const Home: NextPage = () => {
 
   const fetchColors = async (): Promise<void> => {
     try {
-      const response = await fetch(`${SERVER_HOST}/color`, {
-        headers: {
-          'Content-Type': 'application/json',
-          'Access-Control-Allow-Origin': '*'
-        },
-      });
+      const response = await fetch(`${SERVER_HOST}/color`);
       const result = await response.json();
 
       const mappedColors = result.map((color: any) => new ColorService().getColorAsString(color.type, { ...color }));
@@ -63,7 +57,7 @@ const Home: NextPage = () => {
             alignItems: 'center',
             justifyContent: 'center',
           }} className="mb-2 text-center" />
-        <button onClick={handleChangeColors} type="button" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 w-full mt-10">Refresh</button>
+        <button onClick={handleChangeColors} type="button" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-hidden focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 w-full mt-10">Refresh</button>
       </div>
     </div>
   );
