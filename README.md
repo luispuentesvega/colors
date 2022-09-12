@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Color Swatches
+
+Web App to create random color swatches
 
 ## Getting Started
 
@@ -8,7 +10,7 @@ Run the development server:
 npm run dev
 ```
 
-## How to add new color types...
+## How to add new color types?
 
 The Factory Pattern was used to implement the color swatches by adding new classes without changing the existing code, as you can see in the below image.
 ![image info](/diagrams/uml-diagram.png)
