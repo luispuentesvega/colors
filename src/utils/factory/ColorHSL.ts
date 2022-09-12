@@ -1,7 +1,7 @@
 import _random from 'lodash/random';
 
-import { ColorTypes, HSL } from '../../types.d';
-import { IColorSwatch } from './interface';
+import { ColorTypes, HSL } from '../../../types.d';
+import { IColorSwatch } from './ColorInterface';
 
 export class ColorHSL implements IColorSwatch {
   type: ColorTypes = ColorTypes.hsl;

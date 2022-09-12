@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 
 import Swatch from '@uiw/react-color-swatch';
 
-import { ColorService } from '../utils/ColorService';
+import { ColorService } from '../utils/factory/ColorService';
 
 const ColorSwatch: React.FC = () => {
   const [colors, setColors] = useState([]);

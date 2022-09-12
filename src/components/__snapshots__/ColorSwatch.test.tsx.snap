@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ColorSwatch should render Color Swatch title 1`] = `
+<div>
+  <div
+    class="bg-orange-300 px-8 py-8 rounded-lg"
+  >
+    <h1
+      class="text-3xl font-bold text-violet-500 mb-10"
+    >
+      Color Swatch
+    </h1>
+    <div
+      class="w-color-swatch"
+      style="display: flex; flex-wrap: wrap; position: relative; align-items: center; justify-content: center;"
+    />
+    <button
+      class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-hidden focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 w-full mt-10"
+      type="button"
+    >
+      Refresh
+    </button>
+  </div>
+</div>
+`;

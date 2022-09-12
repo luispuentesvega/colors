@@ -1,6 +1,7 @@
 export enum ColorTypes {
   rgb = 'rgb',
-  hsl = 'hsl'
+  hsl = 'hsl',
+  rgba = 'rgba'
 }
 
 export type RGB = {
@@ -10,6 +11,15 @@ export type RGB = {
   blue: number;
 };
 
+
+export type RGBA = {
+  type: ColorTypes.rgba;
+  red: number;
+  green: number;
+  blue: number;
+  alpha: number;
+};
+
 export type HSL = {
   type: ColorTypes.hsl;
   hue: number;
@@ -17,4 +27,4 @@ export type HSL = {
   lightness: string;
 };
 
-export type Color = RGB | HSL;
+export type Color = RGB | HSL | RGBA;
