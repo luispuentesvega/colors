@@ -1,6 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import ColorSwatch from './ColorSwatch';
 import { act } from "react-dom/test-utils";
+import renderer from 'react-test-renderer';
 
 global.fetch = jest.fn(() =>
   Promise.resolve({
@@ -12,10 +13,6 @@ describe('ColorSwatch', () => {
   it('should render Color Swatch title', () => {
     const { container } = render(<ColorSwatch />);
 
-    const heading = screen.getByRole('heading', {
-      name: /Color Swatch/i,
-    });
-    expect(heading).toBeInTheDocument();
     expect(container).toMatchSnapshot();
   });
 });
