@@ -12,7 +12,6 @@ const colorTypes = Object.values(ColorTypes);
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const colors = _range(0, numberOfColors).map(num => {
     const randomColorType = _sample(colorTypes) as never;
-    console.log('randomColorType:', randomColorType);
     return new ColorService().getSwatchColor(randomColorType);
   });
 
